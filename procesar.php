@@ -14,5 +14,27 @@
     ["email" => "sofia.romero@gmail.com", "password" => "klmn2425"],
     ["email" => "gabrieldonacimento667@gmail.com", "password" => "gaboo.05"],
     ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"];
+    // Obtener los datos del formulario
+$correo = $_POST['correo'];
+$contraseña = $_POST['contraseña'];
 
+// Verificar si el usuario existe en el array
+$usuario_valido = false;
+foreach ($usuarios as $usuario) {
+    if ($usuario['email'] === $correo && $usuario['password'] === $contraseña) {
+        $usuario_valido = true;
+        $_SESSION['usuario'] = $correo; // Guardar el correo en la sesión
+        break;
+    }
+}
+
+// Redirigir según la validación
+if ($usuario_valido) {
+    header('Location: pagina_principal.php');
+    exit();
+} else {
+    $_SESSION['error'] = "Correo o contraseña incorrectos.";
+    header('Location: inicio_sesion.php');
+    exit();
+}
 ?>
