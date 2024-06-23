@@ -15,18 +15,17 @@ $usuarios = [
     ["email" => "lucia.moreno@gmail.com", "password" => "cdef2021"],
     ["email" => "francisco.diaz@gmail.com", "password" => "ghij2223"],
     ["email" => "sofia.romero@gmail.com", "password" => "klmn2425"],
-    ["email" => "gabrieldonacimento667@gmail.com", "password" => "gaboo05"],
+    ["email" => "gabrieldonacimento667@gmail.com", "password" => "gaboo"],
     ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"]
 ];
 foreach ($usuarios as $usuario) {
     if ($usuario["email"] == $correo && $usuario["password"] == $contrasena) {
-        header('Location: contacto.html');
+        header('Location: inicio.html');
         break;
     }else{
         echo "asd";
         header('Location: index.php');
         break;
-
     }
 }
 ?>

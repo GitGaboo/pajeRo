@@ -31,3 +31,17 @@ input{
     background-color: rgba(255, 254, 254, 0.39);
     border-radius: 10px;
 }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+a:hover {
+    text-decoration: underline;
+}
