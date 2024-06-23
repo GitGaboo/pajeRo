@@ -10,11 +10,11 @@
 	<section id="bloqueInicio">
 		<section id="inicio">
 			<h1>Inicio de Sesion</h1>
-			<form action="procesar.php" method="post">
+			<form action="procesar.php" method="POST">
 				<label for="correo">Correo Electronico : <br></label>
-				<input type="text" id="correo"><br>
-				<label for="contraseña">Contraseña :<br></label>
-				<input type="text" id="contraseña"><br>
+				<input type="text" id="idCorreo" name="correo"><br>
+				<label for="contrasena">Contraseña :<br></label>
+				<input type="text" id="idContrasena" name="contrasena"><br>
 				<input type="submit" id="boton">
 			</form>
 		</section>
