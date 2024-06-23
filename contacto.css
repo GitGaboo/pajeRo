@@ -1,9 +1,32 @@
 body{
-    background: linear-gradient(skyblue, );
+    background: radial-gradient(rgba(19, 116, 206, 0.753), rgba(107, 198, 221, 0.705)) ;
 }
 header{
     text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
-#form{
+
+#form {
     text-align: center;
+
+}
+#mensaje{
+    
+    text-emphasis-position:initial;
+    font-size: large;
+    text-align: start;
+    padding: 30px;
+}
+label{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: larger;
+    display: block;
+    margin-bottom: 10px;
+}
+label p{
+    margin-bottom: 5px;
 }
