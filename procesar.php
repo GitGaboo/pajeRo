@@ -1,5 +1,8 @@
 <?php
-    $usuarios=["email" => "pepito47@gmail.com", "password" => "pepeto23"],
+$correo = $_POST["correo"];
+$contrasena = $_POST["contrasena"];
+$usuarios = [
+    ["email" => "pepito47@gmail.com", "password" => "pepeto23"],
     ["email" => "alberto1234@gmail.com", "password" => "1234"],
     ["email" => "mauro1747@gmail.com", "password" => "987654321"],
     ["email" => "juan.perez@gmail.com", "password" => "abcd1234"],
@@ -12,29 +15,18 @@
     ["email" => "lucia.moreno@gmail.com", "password" => "cdef2021"],
     ["email" => "francisco.diaz@gmail.com", "password" => "ghij2223"],
     ["email" => "sofia.romero@gmail.com", "password" => "klmn2425"],
-    ["email" => "gabrieldonacimento667@gmail.com", "password" => "gaboo.05"],
-    ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"];
-    // Obtener los datos del formulario
-$correo = $_POST['correo'];
-$contraseña = $_POST['contraseña'];
-
-// Verificar si el usuario existe en el array
-$usuario_valido = false;
+    ["email" => "gabrieldonacimento667@gmail.com", "password" => "gaboo05"],
+    ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"]
+];
 foreach ($usuarios as $usuario) {
-    if ($usuario['email'] === $correo && $usuario['password'] === $contraseña) {
-        $usuario_valido = true;
-        $_SESSION['usuario'] = $correo; // Guardar el correo en la sesión
+    if ($usuario["email"] == $correo && $usuario["password"] == $contrasena) {
+        header('Location: contacto.html');
         break;
-    }
-}
+    }else{
+        echo "asd";
+        header('Location: index.php');
+        break;
 
-// Redirigir según la validación
-if ($usuario_valido) {
-    header('Location: pagina_principal.php');
-    exit();
-} else {
-    $_SESSION['error'] = "Correo o contraseña incorrectos.";
-    header('Location: inicio_sesion.php');
-    exit();
+    }
 }
 ?>
