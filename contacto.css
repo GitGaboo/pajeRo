@@ -17,6 +17,7 @@ header{
     font-size: large;
     text-align: start;
     padding: 30px;
+    word-wrap: break-word;
 }
 label{
     font-family: "Roboto", sans-serif;

@@ -7,6 +7,9 @@ body{
 header{
     text-align: center;
     font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 section{
     text-align: center;
