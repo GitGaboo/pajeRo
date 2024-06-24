@@ -16,7 +16,8 @@ $usuarios = [
     ["email" => "francisco.diaz@gmail.com", "password" => "ghij2223"],
     ["email" => "sofia.romero@gmail.com", "password" => "klmn2425"],
     ["email" => "gabrieldonacimento667@gmail.com", "password" => "gaboo"],
-    ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"]
+    ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"],
+    ["email" => "santiagofernandezsilveira1@gmail.com", "password" => "santiagoelputocrackmecagoenlaputa"]
 ];
 foreach ($usuarios as $usuario) {
     if ($usuario["email"] == $correo && $usuario["password"] == $contrasena) {
