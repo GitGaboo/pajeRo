@@ -12,9 +12,9 @@
 			<h1>Inicio de Sesion</h1>
 			<form action="procesar.php" method="POST">
 				<label for="correo">Correo Electronico : <br></label>
-				<input type="text" id="idCorreo" name="correo"><br>
+				<input type="text" id="idCorreo" name="correo" placeholder="Correo"><br>
 				<label for="contrasena">Contraseña :<br></label>
-				<input type="text" id="idContrasena" name="contrasena"><br>
+				<input type="text" id="idContrasena" name="contrasena" placeholder="Contraseña"><br>
 				<input type="submit" id="boton">
 			</form>
 		</section>

@@ -12,12 +12,19 @@ header{
     text-align: center;
 
 }
-#mensaje{
-    text-emphasis-position:initial;
-    font-size: large;
-    text-align: start;
-    padding: 30px;
-    word-wrap: break-word;
+#correo{
+    width: 30vh;
+    text-align: center;
+}
+#areaTexto{
+  width: 50vh;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  
 }
 label{
     font-family: "Roboto", sans-serif;

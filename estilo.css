@@ -32,14 +32,14 @@ input{
     border-radius: 10px;
 }
 header {
-    display: flex; /* Utiliza Flexbox */
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
     background-color: #f0f0f0;
     padding: 10px;
 }
 h1, nav {
-    margin: 0; /* Elimina el margen por defecto */
+    margin: 0;
 }
 nav ul {
     list-style-type: none;
