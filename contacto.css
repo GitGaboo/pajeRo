@@ -1,5 +1,5 @@
-body{
-    background: linear-gradient(skyblue, );
+html{
+    background-color: rgba(100, 224, 224, 0.884);
 }
 header{
     text-align: center;
@@ -13,7 +13,6 @@ header{
 
 }
 #mensaje{
-    
     text-emphasis-position:initial;
     font-size: large;
     text-align: start;
@@ -28,5 +27,5 @@ label{
     margin-bottom: 10px;
 }
 label p{
-    margin-bottom: 5px;
+    
 }

@@ -1,0 +1,18 @@
+html{
+    background-color: rgba(100, 224, 224, 0.884);
+}
+body{
+
+}
+header{
+    text-align: center;
+    font-size: 30px;
+}
+section{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: calc(20%);
+}
