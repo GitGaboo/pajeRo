@@ -31,17 +31,26 @@ input{
     background-color: rgba(255, 254, 254, 0.39);
     border-radius: 10px;
 }
-ul {
+header {
+    display: flex; /* Utiliza Flexbox */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+h1, nav {
+    margin: 0; /* Elimina el margen por defecto */
+}
+nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
-li {
-    margin-bottom: 10px;
+nav li {
+    margin-right: 10px;
 }
-a {
+nav a {
     text-decoration: none;
     color: #333;
-}
-a:hover {
-    text-decoration: underline;
 }
