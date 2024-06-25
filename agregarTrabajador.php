@@ -18,6 +18,13 @@
     ["nombre" => "Gabriel", "apellido" => "Martín", "rol" => "CEO", "fechaNacimiento" => "1990-09-03"],
     ["nombre" => "Luisa", "apellido" => "Gutiérrez", "rol" => "Encargado", "fechaNacimiento" => "1984-03-20"]
     ];   
+
+    function agregarTrabajadores($nombre, $apellido, $rol, $fechaNacimiento):void{
+        "nombre" => $nombre;
+        "apellido" => $apellido;
+        "rol" => $rol;
+        "fechaNacimiento" => $fechaNacimiento
+    }
     //esto mandarlo a registro.php
 echo "<table>";
 echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th></tr>";
