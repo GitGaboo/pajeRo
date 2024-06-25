@@ -1,4 +1,5 @@
 <?php
+    //Agregar funciones de agregar trabajador
     $trabajadores=[
     ["nombre" => "Juan", "apellido" => "Gómez", "rol" => "Encargado", "fechaNacimiento" => "1990-05-15"],
     ["nombre" => "María", "apellido" => "López", "rol" => "Jefe", "fechaNacimiento" => "1985-12-10"],
@@ -17,6 +18,7 @@
     ["nombre" => "Gabriel", "apellido" => "Martín", "rol" => "CEO", "fechaNacimiento" => "1990-09-03"],
     ["nombre" => "Luisa", "apellido" => "Gutiérrez", "rol" => "Encargado", "fechaNacimiento" => "1984-03-20"]
     ];   
+    //esto mandarlo a registro.php
 echo "<table>";
 echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th></tr>";
     foreach($trabajadores as $trabajador){
