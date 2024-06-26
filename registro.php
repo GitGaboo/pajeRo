@@ -18,9 +18,31 @@
         ["nombre" => "Gabriel", "apellido" => "Martín", "rol" => "CEO", "fechaNacimiento" => "1990-09-03"],
         ["nombre" => "Luisa", "apellido" => "Gutiérrez", "rol" => "Encargado", "fechaNacimiento" => "1984-03-20"]
         ];   
-
+        $name= $_POST["nombre"];
+        $apell= $_POST["apellido"];
+        $roles= $_POST["rol"];
+        $fechaNac= $_POST["fechaNacimiento"];
+        
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            $name= $_POST["nombre"];
+            $apell= $_POST["apellido"];
+            $roles= $_POST["rol"];
+            $fechaNac= $_POST["fechaNacimiento"];
+        }
+        
+        
+        function agregarTrabajadores($name, $apell, $roles, $fechaNac){
+                   $trabajadorIngresado=[
+                   "nombre" => $name,
+                   "apellido" => $apell,
+                   "rol" => $roles,
+                   "fechaNacimiento" => $fechaNac
+                   ];
+                   return $trabajadorIngresado;
+            }
+        $trabajadorNuevo= agregarTrabajadores($name, $apell, $roles, $fechaNac);
+        
 session_start();
-require_once 'agregarTrabajador.php';
    echo "<table>";
    echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th></tr>";
        foreach($trabajadores as $trabajador){
@@ -33,7 +55,23 @@ require_once 'agregarTrabajador.php';
            echo"</td><td>";
            echo $trabajador['fechaNacimiento'];
            echo "</td></tr>";
+           echo"<tr><td>";
+           
        }
    echo "</table>";
-   ?>
+   echo "<br>";
+   echo "<table>";
+   echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th></tr>";
+   foreach($trabajadorNuevo as $trabajadornew){
+    echo"<tr><td>";
+    echo $trabajadornew['nombre'];
+    echo"</td><td>";
+    echo $trabajadornew['apellido'];
+    echo"</td><td>";
+    echo $trabajadornew['rol'];
+    echo"</td><td>";
+    echo $trabajadornew['fechaNacimiento'];
+    echo "</td></tr>";
+}
+    echo "</table>";
 ?>
