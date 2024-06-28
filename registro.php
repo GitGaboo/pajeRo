@@ -18,60 +18,55 @@
         ["nombre" => "Gabriel", "apellido" => "Martín", "rol" => "CEO", "fechaNacimiento" => "1990-09-03"],
         ["nombre" => "Luisa", "apellido" => "Gutiérrez", "rol" => "Encargado", "fechaNacimiento" => "1984-03-20"]
         ];   
-        $name= $_POST["nombre"];
-        $apell= $_POST["apellido"];
-        $roles= $_POST["rol"];
-        $fechaNac= $_POST["fechaNacimiento"];
+        $name= $_POST["name"];
+        $apell= $_POST["apell"];
+        $roles= $_POST["roles"];
+        $fechaNac= $_POST["fechaNac"];
         
+            $trabajadorNuevo= false;
+    
         if($_SERVER["REQUEST_METHOD"] == "POST"){
-            $name= $_POST["nombre"];
-            $apell= $_POST["apellido"];
-            $roles= $_POST["rol"];
-            $fechaNac= $_POST["fechaNacimiento"];
+            $name= $_POST["name"];
+            $apell= $_POST["apell"];
+            $roles= $_POST["roles"];
+            $fechaNac= $_POST["fechaNac"];
+
+            $trabajadorNuevo = [
+                "nombre" => $name,
+                "apellido" => $apell,
+                "rol" => $roles,
+                "fechaNacimiento" => $fechaNac
+            ];
+        } else{
+            $trabajadorNuevo= false;
         }
         
         
-        function agregarTrabajadores($name, $apell, $roles, $fechaNac){
-                   $trabajadorIngresado=[
-                   "nombre" => $name,
-                   "apellido" => $apell,
-                   "rol" => $roles,
-                   "fechaNacimiento" => $fechaNac
-                   ];
-                   return $trabajadorIngresado;
-            }
-        $trabajadorNuevo= agregarTrabajadores($name, $apell, $roles, $fechaNac);
-        
-session_start();
+
    echo "<table>";
    echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th></tr>";
        foreach($trabajadores as $trabajador){
-           echo"<tr><td>";
-           echo $trabajador['nombre'];
-           echo"</td><td>";
-           echo $trabajador['apellido'];
-           echo"</td><td>";
-           echo $trabajador['rol'];
-           echo"</td><td>";
-           echo $trabajador['fechaNacimiento'];
-           echo "</td></tr>";
-           echo"<tr><td>";
+        echo "<tr>";
+        echo "<td>" . $trabajador['nombre'] . "</td>";
+        echo "<td>" . $trabajador['apellido'] . "</td>";
+        echo "<td>" . $trabajador['rol'] . "</td>";
+        echo "<td>" . $trabajador['fechaNacimiento'] . "</td>";
+        echo "</tr>";
            
        }
    echo "</table>";
    echo "<br>";
    echo "<table>";
-   echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th></tr>";
-   foreach($trabajadorNuevo as $trabajadornew){
-    echo"<tr><td>";
-    echo $trabajadornew['nombre'];
-    echo"</td><td>";
-    echo $trabajadornew['apellido'];
-    echo"</td><td>";
-    echo $trabajadornew['rol'];
-    echo"</td><td>";
-    echo $trabajadornew['fechaNacimiento'];
-    echo "</td></tr>";
+   echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>FechaNacimiento</th></tr>";
+   if($trabajadorNuevo!=false){
+    echo "<tr>";
+    echo "<td>" . $trabajadorNuevo["nombre"] . "</td>";
+    echo "<td>" . $trabajadorNuevo["apellido"] . "</td>";
+    echo "<td>" . $trabajadorNuevo["rol"] . "</td>";
+    echo "<td>" . $trabajadorNuevo["fechaNacimiento"] . "</td>";
+    echo "</tr>";
+}else{
+    echo "el usuario no se puede registrar en la tabla";
 }
-    echo "</table>";
+echo "</table>";
 ?>

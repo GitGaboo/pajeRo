@@ -3,24 +3,36 @@
    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="gestionTrabajadores.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Agregar Trabajadores</title>
    </head>
    <body>
-      <!--hacer formulario para enviar datos a gestionTrabajadores.php para probar función-->
       <header><h1>Agregar Trabajadores</h1></header>
       <form action="registro.php" method="post">
-         <label for="nombre">Ingrese el nombre: </label>
-         <input type="text" id="nombre" name="nombre">
+            <label for="nombre">Ingrese el nombre: </label>
+               <input type="text" id="name" name="name">
          <br>
-         <label for="apellido">Ingrese el apellido: </label>
-         <input type="text" id="apellido" name="apellido">
+            <label for="apellido">Ingrese el apellido: </label>
+               <input type="text" id="apell" name="apell">
          <br>
-         <label for="rol">Ingrese el rol del trabajador en la empresa: </label>
-         <input type="text" id="rol" name="rol">
+            <label for="rol">Ingrese el rol del trabajador en la empresa: </label>
+                  <select name="roles" id="roles">
+                     <option value="Empleado">Empleado</option>
+                     <option value="Gerente">Gerente</option>
+                     <option value="Jefe">Jefe</option>
+                     <option value="Encargado">Encargado</option>
+                     <option value="CEO">CEO</option>
+                  </select>
          <br>
-         <label for="fechaNacimiento">Ingresar fecha de nacimiento separado por guiones(YYYY-MM-DD): </label>
-         <input type="text" id="fechaNacimiento" name="fechaNacimiento">
-         <input type="submit" value="Ingresar trabajador">
+            <label for="fechaNacimiento">Ingresar fecha de nacimiento separado por guiones<strong>(YYYY-MM-DD)</strong>: </label>
+         <br>
+               <input type="text" id="fechaNac" name="fechaNac">
+         <br>
+         <br>
+               <input type="submit" value="Ingresar trabajador">
 
 
       </form>
