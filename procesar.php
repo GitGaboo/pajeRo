@@ -1,7 +1,8 @@
 <?php
+session_start();
 $correo = $_POST["correo"];
 $contrasena = $_POST["contrasena"];
-$usuarios = [
+$_SESSION['usuarios'] = [
     ["email" => "pepito47@gmail.com", "password" => "pepeto23"],
     ["email" => "alberto1234@gmail.com", "password" => "1234"],
     ["email" => "mauro1747@gmail.com", "password" => "987654321"],
@@ -19,18 +20,22 @@ $usuarios = [
     ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"],
     ["email" => "santiagofernandezsilveira1@gmail.com", "password" => "santiagoelputocrackmecagoenlaputa"]
 ];
+
+$usuarios = $_SESSION['usuarios'];
+
+$authenticated = false;
+
 foreach ($usuarios as $usuario) {
     if ($usuario["email"] == $correo && $usuario["password"] == $contrasena) {
         header('Location: inicio.html');
         break;
     }else{
-        echo "asd";
         header('Location: index.php');
-        break;
     }
 }
 
-echo "<table>";
+
+/*echo "<table>";
 echo "<tr><th>Rol</th><th>Correo</th></tr>";
     foreach($usuarios as $usuario){
         echo"<tr><td></td><td>";
@@ -38,4 +43,5 @@ echo "<tr><th>Rol</th><th>Correo</th></tr>";
         echo "</td></tr>";
     }
 echo "</table>";
+*/
 ?>
