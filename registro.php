@@ -24,23 +24,23 @@
         $fechaNac= $_POST["fechaNac"];
         
             $trabajadorNuevo= false;
-    
+
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $name= $_POST["name"];
             $apell= $_POST["apell"];
             $roles= $_POST["roles"];
             $fechaNac= $_POST["fechaNac"];
-
+         
             $trabajadorNuevo = [
-                "nombre" => $name,
-                "apellido" => $apell,
-                "rol" => $roles,
-                "fechaNacimiento" => $fechaNac
+                "name" => $name,
+                "apell" => $apell,
+                "roles" => $roles,
+                "fechaNac" => $fechaNac
             ];
+
         } else{
             $trabajadorNuevo= false;
         }
-        
         
 
    echo "<table>";
@@ -57,13 +57,14 @@
    echo "</table>";
    echo "<br>";
    echo "<table>";
+   echo "<thead><h2>Trabajadores Nuevos</h2></thead>";
    echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>FechaNacimiento</th></tr>";
    if($trabajadorNuevo!=false){
     echo "<tr>";
-    echo "<td>" . $trabajadorNuevo["nombre"] . "</td>";
-    echo "<td>" . $trabajadorNuevo["apellido"] . "</td>";
-    echo "<td>" . $trabajadorNuevo["rol"] . "</td>";
-    echo "<td>" . $trabajadorNuevo["fechaNacimiento"] . "</td>";
+    echo "<td>" . $trabajadorNuevo["name"] . "</td>";
+    echo "<td>" . $trabajadorNuevo["apell"] . "</td>";
+    echo "<td>" . $trabajadorNuevo["roles"] . "</td>";
+    echo "<td>" . $trabajadorNuevo["fechaNac"] . "</td>";
     echo "</tr>";
 }else{
     echo "el usuario no se puede registrar en la tabla";
