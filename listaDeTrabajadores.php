@@ -8,8 +8,8 @@
 <body>
    <?php
     require_once 'registro.php';
-    generarLista($trabajadores, $trabajadorNuevo);
-    print_r($_POST);
+    generarLista($trabajadores);
+    generarTrabajador($trabajadorNuevo);
    
    
    ?>
