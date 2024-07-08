@@ -1,23 +1,23 @@
 <?php
 
-    $trabajadores=[
-        ["nombre" => "Juan", "apellido" => "Gómez", "rol" => "Encargado", "fechaNacimiento" => "1990-05-15"],
-        ["nombre" => "María", "apellido" => "López", "rol" => "Jefe", "fechaNacimiento" => "1985-12-10"],
-        ["nombre" => "Pedro", "apellido" => "Martínez", "rol" => "Empleado", "fechaNacimiento" => "1980-07-20"],
-        ["nombre" => "Ana", "apellido" => "García", "rol" => "Gerente", "fechaNacimiento" => "1992-03-25"],
-        ["nombre" => "Carlos", "apellido" => "Fernández", "rol" => "CEO", "fechaNacimiento" => "1988-09-18"],
-        ["nombre" => "Laura", "apellido" => "Sánchez", "rol" => "Encargado", "fechaNacimiento" => "1987-06-05"],
-        ["nombre" => "Jorge", "apellido" => "Hernández", "rol" => "Jefe", "fechaNacimiento" => "1984-11-30"],
-        ["nombre" => "Sofía", "apellido" => "Díaz", "rol" => "Empleado", "fechaNacimiento" => "1995-02-12"],
-        ["nombre" => "Daniel", "apellido" => "Torres", "rol" => "Gerente", "fechaNacimiento" => "1983-08-08"],
-        ["nombre" => "Lucía", "apellido" => "Romero", "rol" => "CEO", "fechaNacimiento" => "1993-04-17"],
-        ["nombre" => "Mario", "apellido" => "Ramírez", "rol" => "Encargado", "fechaNacimiento" => "1986-10-22"],
-        ["nombre" => "Elena", "apellido" => "Jiménez", "rol" => "Jefe", "fechaNacimiento" => "1991-01-05"],
-        ["nombre" => "Andrés", "apellido" => "Alonso", "rol" => "Empleado", "fechaNacimiento" => "1989-07-14"],
-        ["nombre" => "Isabel", "apellido" => "Vega", "rol" => "Gerente", "fechaNacimiento" => "1982-12-28"],
-        ["nombre" => "Gabriel", "apellido" => "Martín", "rol" => "CEO", "fechaNacimiento" => "1990-09-03"],
-        ["nombre" => "Luisa", "apellido" => "Gutiérrez", "rol" => "Encargado", "fechaNacimiento" => "1984-03-20"]
-        ];   
+$trabajadores = [
+    ["nombre" => "Juan", "apellido" => "Gómez", "rol" => "Encargado", "fechaNacimiento" => "1990-05-15", "Cedula" => "34789234"],
+    ["nombre" => "María", "apellido" => "López", "rol" => "Jefe", "fechaNacimiento" => "1985-12-10", "Cedula" => "58294756"],
+    ["nombre" => "Pedro", "apellido" => "Martínez", "rol" => "Empleado", "fechaNacimiento" => "1980-07-20", "Cedula" => "21938475"],
+    ["nombre" => "Ana", "apellido" => "García", "rol" => "Gerente", "fechaNacimiento" => "1992-03-25", "Cedula" => "45678912"],
+    ["nombre" => "Carlos", "apellido" => "Fernández", "rol" => "CEO", "fechaNacimiento" => "1988-09-18", "Cedula" => "83746592"],
+    ["nombre" => "Laura", "apellido" => "Sánchez", "rol" => "Encargado", "fechaNacimiento" => "1987-06-05", "Cedula" => "76583920"],
+    ["nombre" => "Jorge", "apellido" => "Hernández", "rol" => "Jefe", "fechaNacimiento" => "1984-11-30", "Cedula" => "92837465"],
+    ["nombre" => "Sofía", "apellido" => "Díaz", "rol" => "Empleado", "fechaNacimiento" => "1995-02-12", "Cedula" => "13456789"],
+    ["nombre" => "Daniel", "apellido" => "Torres", "rol" => "Gerente", "fechaNacimiento" => "1983-08-08", "Cedula" => "67382941"],
+    ["nombre" => "Lucía", "apellido" => "Romero", "rol" => "CEO", "fechaNacimiento" => "1993-04-17", "Cedula" => "38475629"],
+    ["nombre" => "Mario", "apellido" => "Ramírez", "rol" => "Encargado", "fechaNacimiento" => "1986-10-22", "Cedula" => "58372948"],
+    ["nombre" => "Elena", "apellido" => "Jiménez", "rol" => "Jefe", "fechaNacimiento" => "1991-01-05", "Cedula" => "78264593"],
+    ["nombre" => "Andrés", "apellido" => "Alonso", "rol" => "Empleado", "fechaNacimiento" => "1989-07-14", "Cedula" => "12345678"],
+    ["nombre" => "Isabel", "apellido" => "Vega", "rol" => "Gerente", "fechaNacimiento" => "1982-12-28", "Cedula" => "67482930"],
+    ["nombre" => "Gabriel", "apellido" => "Martín", "rol" => "CEO", "fechaNacimiento" => "1990-09-03", "Cedula" => "29384756"],
+    ["nombre" => "Luisa", "apellido" => "Gutiérrez", "rol" => "Encargado", "fechaNacimiento" => "1984-03-20", "Cedula" => "84756321"]
+];
         $name= $_POST["name"];
         $apell= $_POST["apell"];
         $roles= $_POST["roles"];
