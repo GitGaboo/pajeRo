@@ -1,3 +1,19 @@
+html{
+    background-color: rgb(0, 179, 179);
+}
+body{
+    background-color: rgba(255, 255, 255, 0.603);
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+}
+form{
+    margin-left: 30vh;
+    font-size: x-large;
+}
 header{
     font-family: "PT Serif", serif;
     font-weight: 400;
@@ -8,14 +24,17 @@ form{
     font-weight: 400;
     font-style: normal;
 }
-form select{
+select{
     height: 2.2vh;
     width: 12vh;
     
 }
-form select:hover{
+select:hover{
     background-color: rgba(224, 223, 223, 0.623);
 }
-form input:hover{
+input{
+    height: 2.3vh;
+}
+input:hover{
     background-color: rgba(224, 223, 223, 0.623);
 }

@@ -36,4 +36,17 @@ nav a {
     display: flex;
     justify-content: space-between;
 }
+#enlaces ul li{
+    text-align: center;
+    margin-left: 5.5vh;
+    padding: 1.5vh;
+    height: 6vh;
+    width: 20vh;
+    
+    margin-top: 10vh;
+    border-style:outset;
+    background-color: rgba(41, 201, 161, 0.753);
+    border-color: rgba(26, 224, 181, 0.918);
+}
+
 

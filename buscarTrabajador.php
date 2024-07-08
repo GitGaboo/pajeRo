@@ -21,7 +21,14 @@
             </ul>
         </nav>
     </header>
-    <h3>Verificar Trabajador en la base de datos de la empresa</h3>
+    <section>
+        <ul>
+            <li><a href="https:/ParcialPhP/pajeRo/listaDeTrabajadores.php">Lista de Trabajadores</a></li>
+            <li><a href="https:/ParcialPhP/pajeRo/buscarTrabajador.php"> Buscar Trabajadores</a></li>
+            <li><a href="agregarTrabajadores.html">Agregar Trabajadores</a></li>
+        </ul>
+    </section>
+    <h2>Verificar Trabajador en la base de datos de la empresa</h3>
     <form action="buscarTrabajador.php" method="post">
         <label for="ciTrabajador">Ingresa la cedula</label>
         <input type="number" name="ciTrabajador" placeholder="Cedula de Identidad">

@@ -20,58 +20,66 @@ $trabajadores = [
 ];
 
         
-    
+    $trabajadorNuevo= null;
 
         if($_SERVER["REQUEST_METHOD"] == "POST"){
-            print_r($_POST);
         
         if (isset($_POST["name"]) && isset($_POST["apell"]) && isset($_POST["roles"]) && isset($_POST["fechaNac"])) {
             $name = $_POST["name"];
             $apell = $_POST["apell"];
             $roles = $_POST["roles"];
             $fechaNac = $_POST["fechaNac"];
+            $cedula= $_POST['Cedula'];
     
             $trabajadorNuevo = [
                 "name" => $name,
                 "apell" => $apell,
                 "roles" => $roles,
-                "fechaNac" => $fechaNac
+                "fechaNac" => $fechaNac,
+                "Cedula" => $cedula
             ];
         }
     } else {
         $trabajadorNuevo = false;
-    }
-      
-function generarLista($trabajadores){
-    echo "<table>";
-    echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th></tr>";
+}
+
+    $nuevoT= $trabajadorNuevo;
+
+    function generarLista($trabajadores){
+        echo "<table>";
+        echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th><th>Cedula</th></tr>";
         foreach($trabajadores as $trabajador){
-         echo "<tr>";
-         echo "<td>" . htmlspecialchars($trabajador['nombre']) . "</td>";
-         echo "<td>" . htmlspecialchars($trabajador['apellido']) . "</td>";
-         echo "<td>" . htmlspecialchars($trabajador['rol']) . "</td>";
-         echo "<td>" . htmlspecialchars($trabajador['fechaNacimiento']) . "</td>";
-         echo "</tr>";
+        echo "<tr>";
+        echo "<td>" . htmlspecialchars($trabajador['nombre']) . "</td>";
+        echo "<td>" . htmlspecialchars($trabajador['apellido']) . "</td>";
+        echo "<td>" . htmlspecialchars($trabajador['rol']) . "</td>";
+        echo "<td>" . htmlspecialchars($trabajador['fechaNacimiento']) . "</td>";
+        echo "<td>" . htmlspecialchars($trabajador['Cedula']) . "</td>";
+        echo "</tr>";
             
           }
-      echo "</table>";
-      echo "<br>";
-     echo "<table>";
-      echo "<thead><h2>Trabajadores Nuevos</h2></thead>";
-      echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>FechaNacimiento</th></tr>";
-      if($trabajadorNuevo!=false){
-       echo "<tr>";
-      echo "<td>" . htmlspecialchars($trabajadorNuevo["name"]) . "</td>";
-      echo "<td>" . htmlspecialchars($trabajadorNuevo["apell"]) . "</td>";
-      echo "<td>" . htmlspecialchars($trabajadorNuevo["roles"]) . "</td>";
-       echo "<td>" . htmlspecialchars($trabajadorNuevo["fechaNac"]) . "</td>";
-       echo "</tr>";
- }else{
-     echo "el usuario no se puede registrar en la tabla";
- }
- echo "</table>";
-}
-function buscarTrabajador($trabajadores, $ci) {
+    }
+       
+    function nuevoTrabajador($nuevoT){
+        echo "</table>";
+        echo "<br>";
+        echo "<table>";
+        echo "<thead><h2>Trabajadores Nuevos</h2></thead>";
+        echo "<tr><th>Nombre</th><th>Apellido</th><th>Rol</th><th>Nacimiento</th><th>Cedula</th></tr>";
+        if($nuevoT!=false){
+        echo "<tr>";
+        echo "<td>" . htmlspecialchars($nuevoT["name"]) . "</td>";
+        echo "<td>" . htmlspecialchars($nuevoT["apell"]) . "</td>";
+        echo "<td>" . htmlspecialchars($nuevoT["roles"]) . "</td>";
+        echo "<td>" . htmlspecialchars($nuevoT["fechaNac"]) . "</td>";
+        echo "<td>" . htmlspecialchars($nuevoT['Cedula']) . "</td>";
+        echo "</tr>";
+    } else{
+        echo "el usuario no se puede registrar en la tabla";
+    }
+        echo "</table>";
+    }
+    function buscarTrabajador($trabajadores, $ci) {
     foreach ($trabajadores as $trabajador) {
         if ($trabajador['Cedula'] == $ci) {
             return $trabajador;

@@ -18,7 +18,7 @@ $_SESSION['usuarios'] = [
     ["email" => "sofia.romero@gmail.com", "password" => "klmn2425"],
     ["email" => "gabrieldonacimento667@gmail.com", "password" => "gaboo"],
     ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"],
-    ["email" => "santiagofernandezsilveira1@gmail.com", "password" => "santiagoelputocrackmecagoenlaputa"]
+    ["email" => "santiagofernandezsilveira1@gmail.com", "password" => "santiagoepcmcelp"]
 ];
 $usuarios = $_SESSION['usuarios'];
 $authenticated = false;

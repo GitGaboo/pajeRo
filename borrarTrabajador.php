@@ -9,9 +9,9 @@
 <body>
     <section>
         <ul>
-            <li><a href="gestionTrabajadores.html">Ingresar trabajador</a></li>
-            <li><a href="listaDeTrabajadores.php">Ver lista de trabajadores</a></li>
-            <li><a href="trabajadores.html">Buscar a un trabajador</a></li>
+            <li><a href="https:/ParcialPhP/pajeRo/listaDeTrabajadores.php">Lista de Trabajadores</a></li>
+            <li><a href="https:/ParcialPhP/pajeRo/buscarTrabajador.php"> Buscar Trabajadores</a></li>
+            <li><a href="agregarTrabajadores.html">Agregar Trabajadores</a></li>
         </ul>
     </section>
     <form action="procesar.php" method="post">
@@ -20,6 +20,7 @@
         <input type="submit">
     </form>
     <?php
+    //gabo puto arregla esto antes de que el profe no meta el ponitito
     require_once 'eliminar_usuario.php';
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
