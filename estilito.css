@@ -17,7 +17,7 @@ body {
     text-decoration: white;
     text-align: center;
     background-color: rgba(77, 228, 228, 0.815);
-    border-radius: 2%;
+    border-radius: 10px;
     height: 50%;
     width: 30%;
 }
@@ -35,11 +35,13 @@ form {
 
 input {
     width: 90%;
-    height: 5vh;
-    border: 0;
-    background-color: rgba(255, 254, 254, 0.39);
-    border-radius: 50%;
-    margin-top: 1%;
+    border: 1px solid #00635d;
+    border-radius: 30px;
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
 }
 
 
