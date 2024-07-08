@@ -7,9 +7,9 @@
 </head>
 <body>
    <?php
+   //hay que arreglar esta boludes
     require_once 'registro.php';
     generarLista($trabajadores);
-    generarTrabajador($trabajadorNuevo);
    
    
    ?>
