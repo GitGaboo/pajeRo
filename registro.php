@@ -73,6 +73,4 @@ function buscarTrabajador($trabajadores, $ci) {
     }
     return null;
 }
-
-  
 ?>

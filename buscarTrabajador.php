@@ -22,7 +22,7 @@
         </nav>
     </header>
     <h3>Verificar Trabajador en la base de datos de la empresa</h3>
-    <form action="" method="post">
+    <form action="buscarTrabajador.php" method="post">
         <label for="ciTrabajador">Ingresa la cedula</label>
         <input type="number" name="ciTrabajador" placeholder="Cedula de Identidad">
         <input type="submit" value="Buscar">
@@ -33,6 +33,7 @@
             $ci = $_POST['ciTrabajador'];
             $trabajador = buscarTrabajador($trabajadores, $ci);
             if ($trabajador) {
+                echo "<br>";
                 echo "Nombre: " . $trabajador['nombre'] . "<br>";
                 echo "Apellido: " . $trabajador['apellido'] . "<br>";
                 echo "Rol: " . $trabajador['rol'] . "<br>";

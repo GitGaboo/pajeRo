@@ -10,8 +10,6 @@
     require_once 'registro.php';
     generarLista($trabajadores, $trabajadorNuevo);
     print_r($_POST);
-   
-   
    ?>
 </body>
 </html>

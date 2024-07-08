@@ -20,11 +20,8 @@ $_SESSION['usuarios'] = [
     ["email" => "profeluisfagundez@gmail.com", "password" => "luisutu123"],
     ["email" => "santiagofernandezsilveira1@gmail.com", "password" => "santiagoelputocrackmecagoenlaputa"]
 ];
-
 $usuarios = $_SESSION['usuarios'];
-
 $authenticated = false;
-
 foreach ($usuarios as $usuario) {
     if ($usuario["email"] == $correo && $usuario["password"] == $contrasena) {
         header('Location: inicio.html');
@@ -34,14 +31,15 @@ foreach ($usuarios as $usuario) {
     }
 }
 
-
-/*echo "<table>";
-echo "<tr><th>Rol</th><th>Correo</th></tr>";
-    foreach($usuarios as $usuario){
-        echo"<tr><td></td><td>";
-        echo $usuario["email"];
-        echo "</td></tr>";
+function eliminarUsuario($email) {
+    $usuarios = $_SESSION['usuarios'];
+    foreach ($usuarios as $indice => $usuario) {
+        if ($usuario['email'] === $email) {
+            unset($usuarios[$indice]);
+            $_SESSION['usuarios'] = array_values($usuarios);
+            return true;
+        }
+    return false;
     }
-echo "</table>";
-*/
+}
 ?>
